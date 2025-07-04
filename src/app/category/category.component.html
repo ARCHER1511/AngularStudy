@@ -1,0 +1,8 @@
+<div class="container py-4">
+  <h2 class="mb-4">Shop by Category</h2>
+  <div class="row g-4">
+    <div *ngFor="let item of categories" class="col-md-4">
+      <app-categoryitem [category]="item"></app-categoryitem>
+  </div>
+</div>
+

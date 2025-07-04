@@ -1,0 +1,18 @@
+
+<div class="container mt-4">
+@if(_product)
+{
+    <div class="card">
+    <img [src]="_product.image" class="card-img-top" alt="{{ _product.title }}">
+    <div class="card-body">
+      <h5 class="card-title">{{ _product.title }}</h5>
+      <p class="card-text">{{ _product.description }}</p>
+      <p class="card-text"><strong>Price:</strong> {{ _product.price}}</p>
+      <a routerLink="/products" class="btn btn-primary">Back to products</a>
+    </div>
+  </div>
+}
+@else{
+    <div class="alert alert-warning text-center w-100">Product not found.</div>
+}
+</div>
