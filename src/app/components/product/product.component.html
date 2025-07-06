@@ -1,6 +1,6 @@
 <div class="container mt-4">
   <div class="row row-cols-1 row-cols-md-3 g-4">
-    @for (product of products.products; track product.id) {
+    @for (product of products; track product.id) {
       <div class="col">
         <div class="card h-100 shadow-sm">
           <a routerLink="/products/{{ product.id }}" class="text-decoration-none">

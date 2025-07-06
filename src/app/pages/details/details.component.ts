@@ -1,8 +1,9 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
 import { IProduct } from '../../../Interfaces/IProduct';
 import { ProductService } from '../../services/product.service';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { Router } from 'express';
+
 
 @Component({
   selector: 'app-details',
@@ -10,12 +11,22 @@ import { Router } from 'express';
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss'
 })
-export class DetailsComponent{
+export class DetailsComponent implements OnInit{
 
     _product?:IProduct
-    constructor(private product: ProductService, private route: ActivatedRoute)
+    constructor(private product: ProductService,   private route: ActivatedRoute){ }
+
+    ngOnInit(): void 
     {
-        const Id = this.route.snapshot.paramMap.get('id');
-        this._product = this.product.getById(Number(Id));
+      const id = Number(this.route.snapshot.paramMap.get('id'));
+      this.product.getById(id).subscribe({
+        next: (product: IProduct) => {
+          this._product = product;
+        },
+        error: (err) => {
+          console.error('Error fetching product details:', err);
+        }
+      });
+      
     }
 }
