@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { IProduct } from '../../Interfaces/IProduct';
-import { ProductService } from '../services/product.service';
+import { IProduct } from '../../../Interfaces/IProduct';
+import { ProductService } from '../../services/product.service';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Router } from 'express';
 

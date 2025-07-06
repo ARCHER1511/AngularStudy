@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {CategoryList} from '../../Lists/categoryList';
-import { ICategory } from '../../Interfaces/ICategory';
-import { CategoryitemComponent } from "../categoryitem/categoryitem.component";
+import {CategoryList} from '../../../Lists/categoryList';
+import { ICategory } from '../../../Interfaces/ICategory';
+import { CategoryitemComponent } from "../../components/categoryitem/categoryitem.component";
 
 @Component({
   selector: 'app-category',
