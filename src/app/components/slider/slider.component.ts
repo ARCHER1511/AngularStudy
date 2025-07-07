@@ -11,9 +11,9 @@ import { Component} from '@angular/core';
 export class SliderComponent{
   images: string[] =
     [
-      'Assets/slider1.jpg',
-      'Assets/slider2.jpg',
-      'Assets/slider3.jpg',
+      'assets/slider1.jpg',
+      'assets/slider2.jpg',
+      'assets/slider3.jpg',
     ]
   currentIndex: number = 0;
   getTransform(): string {

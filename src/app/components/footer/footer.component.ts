@@ -8,5 +8,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-    Image : string = "Assets/logo.jpg"
+    Image : string = "assets/logo.jpg"
 }
